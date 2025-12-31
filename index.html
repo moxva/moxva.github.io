@@ -1,0 +1,124 @@
+<!--
+  This file is written by Kenan Masri on 31th of December, 2025 at 21:02 UTC+3
+  Innovate, Advance, Elevate.
+
+  https://moxva.co
+
+  MOXVA is an automotive company envisioned by Kenan Masri for designing and manufacturing
+  sportscars and exotic vehicles that combine cutting-edge technology, sustainability, and performance.
+
+  Copyright © 2025 MOXVA - all rights reserved
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <title>MOXVA</title>
+  <meta charset="UTF-8" /><link
+    rel="icon"
+    type="image/x-icon"
+    href="/assets/favicon.ico"/><style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 850/640;
+      overflow: hidden;
+    }
+    .bki {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      transform: scale(1) rotateX(0);
+      transition: all 2s ease;
+      z-index: 0;
+    }
+    .bki.visible {
+      opacity: 1;
+      transform: scale(1) rotateX(0);
+    }
+    .oyi {
+      position: absolute;
+      top: calc(444 / 640 * 100%);
+      left: calc(505 / 850 * 100%);
+      width: calc(217 / 850 * 100%);
+      height: calc(101 / 640 * 100%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      z-index: 1;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #888;
+    }
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <noscript>
+    <style>
+      .bki {
+        opacity: 1 !important;
+        transform: scale(1) rotateX(0) !important;
+        transition: none !important;
+      }
+    </style>
+  </noscript>
+  <div class="container">
+    <div class="b-wrapper">
+      <img alt="" class="bki" src="/assets/img/moxva-wd-pathway.png" id="bKI" />
+      <img alt="" class="oyi" src="/assets/img/moxva-wd-bhaz.png" />
+    </div>
+  </div>
+  <footer>
+    <p>
+      <b>Created by MOXVA™</b>
+    </p>
+    <div class="social-links">
+      <a href="https://fb.com/moxva" target="_blank" rel="noopener noreferrer">Facebook</a>
+      |
+      <a href="https://instagram.com/moxva.co" target="_blank" rel="noopener noreferrer">Instagram</a>
+      |
+      <a href="https://moxva.co" target="_blank" rel="noopener noreferrer">Website</a>
+    </div>
+  </footer>
+  <script>
+    const bKI = document.getElementById("bKI");
+    document.addEventListener(
+      "mousemove",
+      () => {
+        bKI.classList.add("visible");
+      },
+      { once: true }
+    );
+    setTimeout(() => {
+      bKI.classList.add("visible");
+    }, 3000);
+  </script>
+</html>
